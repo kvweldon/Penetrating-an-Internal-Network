@@ -44,6 +44,14 @@ The Support Department
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/41e8a85b-cf6b-46f9-b5c5-cb276b24c147)
 
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/b8b53073-7666-4ce2-afcc-84719bd5b36b)
+
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/3e7ce2ef-4d3f-43ae-8664-30071b9b8dc4)
+
+**<p style="font-size: 15px;">Step 4: Take advantage of the exploited victim.</p>**
+
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/37cf91b5-5adb-4ae0-a427-c2af5a0783bc)
+
 
 
 
