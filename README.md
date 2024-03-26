@@ -15,6 +15,6 @@ I will conduct an assessment by performing initial reconnaissance and informatio
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/b8291d92-cd56-40f7-b7ee-794163bd0e35)
 
-![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/a2524997-6ad0-4b4b-877b-7e8da31483f3)
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/5ffbf9a8-4f3d-44f2-a101-d6cc5ead2ad8)
 
 
