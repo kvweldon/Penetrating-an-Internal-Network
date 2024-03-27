@@ -60,6 +60,7 @@ The Support Department
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/f36ea8ca-fe63-44d6-80a8-644b278b9e51)
 
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/c518ffbf-602e-4aea-a523-0435a08e97ad)
 
 
 
