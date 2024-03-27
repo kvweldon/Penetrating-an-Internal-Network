@@ -63,14 +63,15 @@ I then typed the following lines of code into Notepad:
 
 "%userprofile%\Downloads\safetool.exe"
 
-These commands facilitate the download and execution of the exploit file on the victim's system. The strategic use of a basic batch file is effective in circumventing malware scanners that may otherwise detect and remove the exploit from an email.
+These commands facilitate the download and execution of the exploit file on the victim's system. The strategic use of a basic batch file is effective in circumventing malware scanners that may otherwise detect and remove the exploit from an email. I saved the notepad and exited.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/44a81139-5023-4440-aacb-15c752b6a1fe)
 
-I saved the 
+I then opened the File Explorer, selected downloads and double clicked on the trythis file to download the batch file. 
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/7e793e40-644a-4982-8ca9-2a57a5981999)
 
+Downloading the batch file caused the below command prompt to open, displaying the batch file's operations. As the email instructed, I minimized the window and continued my work day. The victim has been compromised and a remote control session has been established with the listener.  
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/b8b53073-7666-4ce2-afcc-84719bd5b36b)
 
