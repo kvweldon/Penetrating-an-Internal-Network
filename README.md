@@ -62,11 +62,17 @@ The Support Department
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/78074d05-e177-4390-93f0-4740ae567606)
 
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/9791e984-f45c-467a-b426-0f82afda102f)
 
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/cc638e30-4482-4326-8b09-dda42f94c4ad)
 
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/7a08a906-5ba2-4ebe-97d6-da5abc5b8732)
 
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/8db7738a-717f-479a-8b39-eb0f1aba1d90)
 
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/ed720de7-11ac-4953-9b90-672bcc506bac)
 
+![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/ca7101f7-04b9-42e0-bc49-1d75240ed48f)
 
 
 
