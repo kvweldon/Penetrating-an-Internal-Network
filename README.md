@@ -111,11 +111,7 @@ I then ran the exploit, and connected a second session to Jaime's compromised sy
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/cc638e30-4482-4326-8b09-dda42f94c4ad)
 
-![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/7a08a906-5ba2-4ebe-97d6-da5abc5b8732)
-
-![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/8db7738a-717f-479a-8b39-eb0f1aba1d90)
-
-![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/ed720de7-11ac-4953-9b90-672bcc506bac)
+I exited the current session, and entered "sessions" to display the remaining sessions. In order to terminate session 1, I entered "sessions -k 1", and then checked that all sessions were were terminated. Finally, I exported the captured hases to a text file with the command, "creds -o ms10-creds.txt".
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/ca7101f7-04b9-42e0-bc49-1d75240ed48f)
 
