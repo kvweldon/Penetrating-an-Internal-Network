@@ -107,7 +107,7 @@ To ensure the configuration was correct, I entered "show option" and confirmed t
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/f36ea8ca-fe63-44d6-80a8-644b278b9e51)
 
-I then ran the exploit.
+I then ran the exploit, and connected a second session to Jaime's compromised system. I entered "getuid" to check the user ID of the current session. It still showed structureality/jaime, Jaime's ID. I then entered "getsystem" to perform privilege escalation and checked the user ID once again to show that I had SYSTEM privileges. I then ran "hashdump" to export hases for local user accounts on MS10.
 
 ![image](https://github.com/kvweldon/Penetrating-an-Internal-Network/assets/141193154/cc638e30-4482-4326-8b09-dda42f94c4ad)
 
